@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+</head>
+<body>
+
+<center>
+<h3 style="color:blue;">Add New User</h3>
+</center>
+
+
+<form action="{{ url_for('register') }}" enctype="multipart/form-data" method="post">
+  {% if mesage is defined and mesage %}
+			<div class="alert alert-warning">{{ mesage }}</div>
+		{% endif %}
+
+<center>
+    <input type="Text" placeholder="" name="parameter" value = "{{ companyid }}"></input>
+<p>
+<label for="Name"><b>Name</b></label>
+<input type="Text" placeholder="Enter Name" name="Name" id="Name" required>
+</p>
+
+<br>
+
+<p>
+<label for="Email"><b>Email</b></label>
+<input type="Email" placeholder="Enter Email Address" id="Email" name="Email">
+</p>
+<br>
+
+<p>
+ <label for="Password"><b>Password</b></label>
+ <input type="Password" placeholder="Enter Your Password" name="Password" id="Password" required>
+</p>
+<br>
+
+<p>
+<label for="Phone"><b>Phone</b></label>
+<input type="Phone" placeholder="Enter Phone Number" id="Phone" name="Phone" required>
+</p>
+<br>
+<table>
+        <tr><td><input type="hidden" name="rosastatus" value="Rosa Status"><b>Rosa Status:</b></td></tr>
+        
+        <tr><td><input class="field checkbox" type="hidden" name="box1" value="0"/></td>
+        <td><input class="field checkbox" type="checkbox" name="box1" value="1"/><label class="choice">RosaFaStatus</label></td></tr>
+        
+        <tr><td><input class="field checkbox" type="hidden" name="box2" value="0"/></td>
+        <td><input class="field checkbox" type="checkbox" name="box2" value="1"/><label class="choice">RosaIStatus</label></td></tr>
+        
+        <tr><td><input class="field checkbox" type="hidden" name="box3" value="0"/></td>
+        <td><input class="field checkbox" type="checkbox" name="box3" value="1"/><label class="choice">RosaCStatus</label></td></tr>
+        
+        
+        <tr><td><input class="field checkbox" type="hidden" name="box4" value="0"/></td>
+        <td><input class="field checkbox" type="checkbox" name="box4" value="1"/><label class="choice">RosaWStatus</label></td></tr>
+        
+        <tr><td><input class="field checkbox" type="hidden" name="box5" value="0"/></td>
+        <td><input class="field checkbox" type="checkbox" name="box5" value="1"/><label class="choice">RosaEStatus</label></td></tr>
+        
+        <tr><td><input class="field checkbox" type="hidden" name="box6" value="0"/></td>
+        <td><input class="field checkbox" type="checkbox" name="box6" value="1"/><label class="choice">RosaHvStatus</label></td></tr>
+</table>
+
+
+
+    
+<br>
+
+<br>
+<br>
+
+<label for="image"><b>Image</b></label>
+<input type="file"  id = "image" name="image">
+
+<br>
+
+<br>
+<input style="background-color:pink" type="submit" value="Add User">
+<br>
+<br>
+<input style="background-color:lightblue;" type="button" value="Back" onclick="history.back()">
+
+
+
+</center>
+</form>
+
+</body>
+</html>

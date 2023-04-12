@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>ROSA-I</title>
+    <style>    
+    a.button {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        text-decoration: none;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+     }
+    </style>
+
+  </head>
+  <body>
+       <div>
+          <h1>ROSA-I</h1>
+       </div>
+       <a id ="img_nav" href="{{ url_for('index')}}"></a>
+       <nav id= "nav_grid">
+        <section class="nav_section">
+           <a href="{{ url_for('open')}}" class="button">OPEN</a>
+           <a href="{{ url_for('teach')}}" class="button">TEACH</a>
+        </section>
+    </nav>
+       
+       
+
+       
+  </body>
+</html>

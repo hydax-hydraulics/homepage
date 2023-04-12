@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Client Sign Up </title>
+<link rel="stylesheet" type="text/css" href="123.css">
+</head>
+<body>
+<main class="home">
+    <nav class="navbar">
+        <img class="logo" src="{{url_for('static', filename='LOGO.png')}}">
+        <div class="nav-items"></div>
+    </nav>
+</main>
+</body>
+    <center>
+      <div class="container">
+    <h1>Client Signup</h1>
+    <form action="{{ url_for('clientsignup') }}" method="post">
+            {% if mesage is defined and mesage %}
+			<div class="alert alert-warning">{{ mesage }}</div>
+		{% endif %}
+    <div class="form-group">
+      <label for="clientname">Client Name:</label>
+      <input type="text" name="clientname" required>
+    </div><br><br>
+    <div class="form-group">
+      <label for="loginname">Login Name:</label>
+      <input type="text" name="loginname" required></div><br><br>
+      <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" name="password" required></div><br><br>
+      <div class="form-group">
+      <label for="recoveryemail">Recovery Email:</label>
+      <input type="recoveryemail" name="recoveryemail" required></div><br><br>
+      <div class="form-group">
+      <label for="recoveryphone">Recovery Phone:</label>
+      <input type="recoveryphone" name="recoveryphone" required></div><br><br>
+      <input type="submit" value="Submit">
+      <p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('clientsignin')}}"> Sign-in here</a></p>
+
+    </form>
+      </div>
+
+    </center>
+    <footer class="footer-section">
+      <div class="container-4">
+        <div class="nav-items"></div>
+        <div class="text-6">© 2022 HYDAX Hydraulics Pvt. Ltd. All rights reserved.</div>
+      </div>
+    </footer>
+
+  </body>
+</html>
